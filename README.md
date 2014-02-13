@@ -19,9 +19,24 @@ Open `cli.js` in a text editor.
 Edit the first two variables, if neccessary.
 
 ##Usage
+###Telnet
 If everything works, you could connect via `telnet <ip> <port>` and send commands like `#FFFFFF`.
 
-Another possibility is, to use the CLI. Make sure, `cli.js` it is executable (`chmod +x cli.js`), and node is installed. Then use `cli.js "#FFFFFF`.
+###CLI
+The CLI provides some more functions.
+
+####Set color
+Use this like telnet command: `./cli.js "#00FF00"`
+
+####Blink
+To let your strip blink, use this: `./cli.js "blink" "FIRST_COLOR" "SECOND_COLOR" TIMEOUT TIMES`
+
+- __FIRST_COLOR__: e.g. `#FF00FF`
+- __SECOND_COLOR__: e.g. `#00FF00`
+- __TIMEOUT__: Delay between color changes in milliseconds. Values smaller than 100ms may not work correctly
+- __TIMES__: Optional, you may specify an amount of blinks. If left out, it will blink (nearly) forever
+
+---
 
 In both cases, remember the leading `#`, this "resets" the color. Also, remember that the letters have to be capitals.
 
