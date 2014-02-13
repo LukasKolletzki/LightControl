@@ -36,9 +36,15 @@ To let your strip blink, use this: `./cli.js "blink" "FIRST_COLOR" "SECOND_COLOR
 - __TIMEOUT__: Delay between color changes in milliseconds. Values smaller than 100ms may not work correctly
 - __TIMES__: Optional, you may specify an amount of blinks. If left out, it will blink (nearly) forever
 
+####Random
+To let your strip show random colors, use this: `./cli.js "random" TIMEOUT TIMES`
+
+- __TIMEOUT__: Delay between color changes in milliseconds. Values smaller than 100ms may not work correctly
+- __TIMES__: Optional, you may specify an amount of color changes. If left out, it will change (nearly) forever
+
 ---
 
-In both cases, remember the leading `#`, this "resets" the color. Also, remember that the letters have to be capitals.
+In all cases, remember the leading `#`, this "resets" the color. Also, remember that the letters have to be capitals.
 
 ##License
 LightControl is a interface for controlling a RGB LED-strip. Copyright (C) 2014 Lukas Kolletzki
