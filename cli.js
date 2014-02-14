@@ -9,7 +9,7 @@
 
 var ip = "42.13.37.42"; //arduino's ip
 var port = 23; //arduino's port
-var randomcolors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#00FFFF", "#FF00FF", "#FFFFFF"]; //colors used by random function
+var randomColors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#00FFFF", "#FF00FF", "#FFFFFF"]; //colors used by random function
 var net = require("net");
 
 function blink(color1, color2, timeout, times, cb) {
