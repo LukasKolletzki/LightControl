@@ -42,6 +42,14 @@ To let your strip show random colors, use this: `./cli.js "random" TIMEOUT TIMES
 - __TIMEOUT__: Delay between color changes in milliseconds. Values smaller than 100ms may not work correctly
 - __TIMES__: Optional, you may specify an amount of color changes. If left out, it will change (nearly) forever
 
+####Fade
+You are able to fade from one color to another. Use this: `./cli.js "fade" "FIRST_COLOR" "SECOND_COLOR" TIMEOUT STEPS`
+
+- __FIRST_COLOR__: e.g. `#FF00FF`
+- __SECOND_COLOR__: e.g. `#00FF00`
+- __TIMEOUT__: Delay between color changes in milliseconds. Values smaller than 100ms may not work correctly
+- __STEPS__: Step size, greater value = slower but smoother fade, smaller value = faster but snatchier fade
+
 ---
 
 In all cases, remember the leading `#`, this "resets" the color. Also, remember that the letters have to be capitals.
