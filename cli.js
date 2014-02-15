@@ -34,7 +34,7 @@ function blink(color1, color2, timeout, times, cb) {
 	}
 }
 
-function random(colors, timeout, times, cb) {
+function random(colors, previous, timeout, times, cb) {
 	if(times || times == undefined) {
 		if(times == undefined) {
 			newTimes = times;
@@ -43,8 +43,12 @@ function random(colors, timeout, times, cb) {
 		}
 
 		setTimeout(function() {
-			client.write(colors[Math.floor(Math.random() * colors.length)], "utf8", function() {
-				random(colors, timeout, newTimes, cb);
+			var color = colors[Math.floor(Math.random() * colors.length)];
+			while(color == previous) {
+				color = colors[Math.floor(Math.random() * colors.length)];
+			}
+			client.write(color, "utf8", function() {
+				random(colors, color, timeout, newTimes, cb);
 			});
 		}, timeout);
 	} else {
@@ -87,7 +91,7 @@ var client = net.connect(port, ip, function(){
 			});
 			break;
 		case "random":
-			random(randomColors, process.argv[3], process.argv[4], function() {
+			random(randomColors, randomColors[0], process.argv[3], process.argv[4], function() {
 				process.exit(0);
 			});
 			break;
