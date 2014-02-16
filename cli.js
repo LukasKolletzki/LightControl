@@ -13,7 +13,7 @@ var randomColors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#00FFFF", "#FF0
 var net = require("net");
 
 function blink(color1, color2, timeout, times, cb) {
-	if(times || times == undefined) {
+	if(times > 0 || times == undefined) {
 		if(times == undefined) {
 			newTimes = times;
 		} else {
@@ -35,7 +35,7 @@ function blink(color1, color2, timeout, times, cb) {
 }
 
 function random(colors, previous, timeout, times, cb) {
-	if(times || times == undefined) {
+	if(times > 0 || times == undefined) {
 		if(times == undefined) {
 			newTimes = times;
 		} else {
