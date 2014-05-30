@@ -54,6 +54,9 @@ You are able to fade from one color to another. Use this: `./cli.js "fade" "FIRS
 
 In all cases, remember the leading `#`, this "resets" the color. Also, remember that the letters have to be capitals.
 
+##Todo
+- Implement serial communication to send colors
+
 ##License
 LightControl is a interface for controlling a RGB LED-strip. Copyright (C) 2014 Lukas Kolletzki
 
